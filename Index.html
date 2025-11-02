@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPET - Un futuro sostenible en CUGDL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafff8; /* Un blanco con un toque muy ligero de verde */
+        }
+        .hero-bg {
+            background-image: linear-gradient(to top, rgba(240, 253, 244, 1), rgba(240, 253, 244, 0.6)), url('https://images.unsplash.com/photo-1542601906-990-b4d3fb778b09?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Ajuste para que el scroll suave tenga en cuenta la altura del header fijo */
+        html {
+            /* py-3 (0.75rem*2) + py-2 (0.5rem*2) + border (1px) ~= 85px con fuentes Poppins */
+            scroll-padding-top: 85px; 
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Encabezado Fijo con dos barras -->
+    <header class="sticky top-0 z-50 shadow-md">
+        <!-- Barra 1: Título -->
+        <div class="bg-white">
+            <div class="container mx-auto px-6 py-3">
+                <h1 class="text-3xl font-bold text-green-700">EcoPET</h1>
+            </div>
+        </div>
+        <!-- Barra 2: Navegación -->
+        <nav class="bg-green-50/90 backdrop-blur-md border-t border-green-100">
+            <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+                <div class="hidden sm:flex space-x-6">
+                    <a href="#problema" class="text-gray-600 hover:text-green-700 font-medium">Problema</a>
+                    <a href="#costo-ineficiencia" class="text-gray-600 hover:text-green-700 font-medium">Costo</a>
+                    <a href="#propuesta" class="text-gray-600 hover:text-green-700 font-medium">Propuesta</a>
+                    <a href="#demo" class="text-gray-600 hover:text-green-700 font-medium">Demo</a>
+                </div>
+                <a href="#demo" class="bg-green-600 text-white px-5 py-2 rounded-full font-medium hover:bg-green-700 transition-colors">
+                    Probar Demo
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero-bg py-24 md:py-40">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-green-800 drop-shadow-md">EcoPET</h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-700 font-medium max-w-3xl mx-auto">
+                Transformando el plástico de CUGDL en oportunidades para un futuro sostenible.
+            </p>
+            <a href="#demo" class="mt-8 inline-block bg-green-600 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-green-700 shadow-lg transition-transform transform hover:scale-105">
+                Prueba la Demo del Sistema
+            </a>
+        </div>
+    </section>
+
+    <main>
+        <!-- Sección "Problema" -->
+        <section id="problema" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="hidden md:block">
+                     <!-- Imagen de contaminación por plástico -->
+                    <img src="https://images.unsplash.com/photo-1618483980310-c650e8f000d1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Contaminación por botellas de plástico" class="rounded-2xl shadow-xl w-full h-full object-cover"  onerror="this.src='https://placehold.co/800x600/f0fdf4/166534?text=Contaminaci%C3%B3n'">
+                </div>
+                <div class="pl-0 md:pl-12">
+                    <span class="text-green-600 font-semibold uppercase">El Contexto</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mt-2 mb-6">El Problema</h2>
+                    <div class="text-lg text-gray-600 space-y-4 leading-relaxed">
+                        <p>
+                            En la Zona Metropolitana de Guadalajara, las botellas de plástico son una de las principales fuentes de contaminación.
+                        </p>
+                        <p>
+                            A diario, miles de ellas terminan tiradas en calles, parques y ríos como el Santiago, donde tardan cientos de años en degradarse.
+                        </p>
+                        <p>
+                            Este problema se agrava porque muchas personas no las reciclan y los sistemas de recolección no son suficientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección "Costo de Ineficiencia" -->
+        <section id="costo-ineficiencia" class="py-20 md:py-28 bg-green-50">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <span class="text-green-600 font-semibold uppercase">La Consecuencia</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mt-2 mb-8">Costo de Ineficiencia</h2>
+                <div class="bg-white border border-gray-200 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-center gap-6 shadow-lg">
+                    <div class="flex-shrink-0 flex items-center -space-x-4">
+                        <!-- Icono de Persona -->
+                        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center shadow-md border-2 border-white z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                         <!-- Icono de Plástico (Basura) -->
+                        <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center shadow-md border-2 border-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-4v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-xl md:text-2xl text-gray-700 font-medium md:text-left">
+                        En promedio, cada persona genera alrededor de <strong>1.8 kg de plástico</strong> al día.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección "Nuestra Propuesta" -->
+        <section id="propuesta" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="pr-0 md:pr-12">
+                    <span class="text-green-600 font-semibold uppercase">El Proyecto</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mt-2 mb-6">Nuestra Propuesta</h2>
+                    <div class="text-lg text-gray-600 space-y-4 leading-relaxed">
+                        <p>
+                            Nuestra solución consiste en implementar <strong>Máquinas Expendedoras Inversas</strong> en las que se puedan introducir botellas de plástico.
+                        </p>
+                        <p>
+                            En esta misma máquina, el estudiante podrá colocar su tarjeta del transporte público, permitiendo que las botellas ingresadas se transformen en <strong>puntos canjeables por saldo</strong>.
+                        </p>
+                        <p>
+                            Los plásticos recolectados serán transformados en <strong>filamento de impresión 3D</strong> que pueda ser utilizado en los centros de UDG con carreras creativas, cerrando el ciclo del reciclaje.
+                        </p>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <!-- Imagen de filamento reciclado -->
+                    <img src="https://images.unsplash.com/photo-1628004511848-a0f5a72f0535?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Filamento de impresión 3D hecho de plástico reciclado" class="rounded-2xl shadow-xl w-full h-full object-cover"  onerror="this.src='https://placehold.co/800x600/a0eec0/1a472a?text=Filamento+3D'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección "Demo del Sistema" -->
+        <section id="demo" class="py-20 md:py-28 bg-green-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-green-600 font-semibold uppercase">Demostración</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mt-2 mb-12">
+                        Demo del Sistema de la Máquina
+                    </h2>
+                </div>
+
+                <!-- Contenedor del Iframe con el código de la demo incrustado -->
+                <div class="max-w-6xl mx-auto">
+                    <div class="bg-gray-800 rounded-t-xl p-4 flex items-center space-x-2">
+                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <iframe 
+                        title="Demo de la aplicación EcoPET"
+                        class="w-full h-[800px] bg-white border-x-4 border-b-4 border-gray-800 rounded-b-xl shadow-2xl"
+                        sandbox="allow-scripts allow-same-origin"
+                        srcdoc="<!DOCTYPE html>
+<html lang=&quot;es&quot;>
+<head>
+    <meta charset=&quot;UTF-8&quot;>
+    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+    <title>EcoPET - Dashboard de Reciclaje</title>
+    <script src=&quot;https://cdn.tailwindcss.com&quot;></script>
+    <link href=&quot;https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap&quot; rel=&quot;stylesheet&quot;>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0fdf4; /* Very light green background */
+        }
+        .page {
+            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+        }
+        .hidden-page {
+            opacity: 0;
+            transform: scale(0.98);
+            pointer-events: none;
+            position: absolute;
+            display: none; /* Ocultar para que no ocupe espacio */
+            width: 100%;
+        }
+        .visible-page {
+            opacity: 1;
+            transform: scale(1);
+            position: relative; /* Ocupar espacio en el layout */
+            display: block;
+            width: 100%;
+        }
+        .scanner-line {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #10b981, transparent);
+            box-shadow: 0 0 15px #10b981;
+            animation: scan 2.5s infinite cubic-bezier(0.5, 0, 0.5, 1);
+        }
+        @keyframes scan {
+            0% { top: -10%; }
+            100% { top: 110%; }
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #dcfce7; }
+        ::-webkit-scrollbar-thumb { background: #22c55e; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #16a34a; }
+    </style>
+</head>
+<body class=&quot;text-gray-800 antialiased overflow-x-hidden&quot;>
+
+    <!-- Contenedor principal para manejar el cambio de página -->
+    <div class=&quot;relative w-full min-h-screen&quot;>
+
+        <!-- Page 1: Login/QR Scan -->
+        <div id=&quot;login-page&quot; class=&quot;page visible-page min-h-screen flex flex-col items-center justify-center p-4 bg-cover bg-center&quot; style=&quot;background-image: url('https://images.unsplash.com/photo-1593782449972-5246944b38a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');&quot;>
+            <div class=&quot;absolute inset-0 bg-green-950/60 backdrop-blur-sm&quot;></div>
+            <div class=&quot;relative text-center bg-white/90 backdrop-blur-xl p-8 md:p-12 rounded-2xl shadow-2xl max-w-lg w-full z-10&quot;>
+                <h1 class=&quot;text-4xl md:text-5xl font-bold text-green-700&quot;>EcoPET</h1>
+                <p class=&quot;text-gray-600 mt-2 mb-8 text-lg&quot;>Inicia sesión para un futuro más verde.</p>
+                <div class=&quot;relative w-52 h-52 mx-auto bg-gray-100 rounded-xl shadow-inner flex items-center justify-center overflow-hidden border-2 border-gray-200&quot;>
+                    <svg class=&quot;w-28 h-28 text-green-600 opacity-70&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot;>
+                        <path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 4.875c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013.75 9.375v-4.5zM3.75 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zM13.5 4.875c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 0113.5 9.375v-4.5z&quot; />
+                        <path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M13.5 12.75h4.5a2.25 2.25 0 012.25 2.25v4.5a2.25 2.25 0 01-2.25-2.25h-4.5a2.25 2.25 0 01-2.25-2.25V15a2.25 2.25 0 012.25-2.25z&quot; />
+                    </svg>
+                    <div class=&quot;scanner-line&quot;></div>
+                </div>
+                <button id=&quot;scan-btn&quot; class=&quot;mt-8 bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 w-full text-xl flex items-center justify-center gap-3&quot;>
+                    <svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-6 w-6&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;>
+                      <path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 4v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l.707-.707M6.343 17.657l-.707.707m12.728 0l.707.707M12 20v-1&quot; />
+                    </svg>
+                    Escanear Credencial
+                </button>
+            </div>
+        </div>
+
+        <!-- Page 2: Main Application -->
+        <div id=&quot;main-dashboard-page&quot; class=&quot;page hidden-page min-h-screen&quot;>
+            <div class=&quot;container mx-auto p-4 sm:p-6 md:p-8&quot;>
+                <header class=&quot;mb-8 flex flex-col sm:flex-row justify-between sm:items-center gap-4&quot;>
+                    <div>
+                        <h1 class=&quot;text-4xl font-bold text-green-800&quot;>Tu Panel de Reciclaje</h1>
+                        <div id=&quot;student-info&quot; class=&quot;text-lg text-gray-600&quot;></div>
+                    </div>
+                    <button id=&quot;logout-btn&quot; class=&quot;flex-shrink-0 bg-red-100 text-red-700 px-4 py-2 rounded-lg font-medium hover:bg-red-200 transition-colors text-sm&quot;>Cerrar Sesión</button>
+                </header>
+
+                <div class=&quot;grid grid-cols-1 lg:grid-cols-3 gap-6&quot;>
+                    <!-- Main Tools Column -->
+                    <div class=&quot;lg:col-span-2 space-y-6&quot;>
+                        <!-- Simulator -->
+                        <div class=&quot;bg-white p-6 rounded-2xl shadow-lg border border-gray-200&quot;>
+                            <h2 class=&quot;text-2xl font-bold mb-4 text-green-700&quot;>Registra tus Botellas</h2>
+                            <div class=&quot;grid grid-cols-1 md:grid-cols-3 gap-4 text-center mb-6&quot;>
+                                <div class=&quot;bg-gray-50 p-4 rounded-xl&quot;>
+                                    <p class=&quot;text-sm font-medium text-gray-500&quot;>Botellas</p>
+                                    <p id=&quot;bottle-count&quot; class=&quot;text-4xl font-bold text-green-600&quot;>0</p>
+                                </div>
+                                <div class=&quot;bg-gray-50 p-4 rounded-xl&quot;>
+                                    <p class=&quot;text-sm font-medium text-gray-500&quot;>EcoPuntos</p>
+                                    <p id=&quot;points-count&quot; class=&quot;text-4xl font-bold text-green-600&quot;>0</p>
+                                </div>
+                                <div class=&quot;bg-gray-50 p-4 rounded-xl&quot;>
+                                    <p class=&quot;text-sm font-medium text-gray-500&quot;>Saldo (MXN)</p>
+                                    <p class=&quot;text-4xl font-bold text-green-600&quot;>$<span id=&quot;money-value&quot;>0.00</span></p>
+                                </div>
+                            </div>
+                            <button id=&quot;add-bottle-btn&quot; class=&quot;w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-xl shadow-md transition-transform transform hover:scale-[1.02] text-lg&quot;>
+                                + Depositar 1 Botella de PET
+                            </button>
+                        </div>
+
+                        <!-- Activity Log -->
+                        <div class=&quot;bg-white p-6 rounded-2xl shadow-lg border border-gray-200&quot;>
+                            <h2 class=&quot;text-2xl font-bold mb-4 text-green-700&quot;>Registro de Actividad</h2>
+                            <div id=&quot;activity-log&quot; class=&quot;h-60 rounded-lg p-3 overflow-y-auto bg-gray-50 border&quot;>
+                                 <p id=&quot;empty-log-msg&quot; class=&quot;text-gray-500 text-center pt-20&quot;>Aquí aparecerá tu historial de reciclaje.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Side Tools Column -->
+                    <div class=&quot;space-y-6&quot;>
+                         <!-- Goal Calculator -->
+                        <div class=&quot;bg-white p-6 rounded-2xl shadow-lg border border-gray-200&quot;>
+                            <h2 class=&quot;text-2xl font-bold mb-4 text-green-700&quot;>Calcula tus Metas</h2>
+                            <div class=&quot;space-y-3&quot;>
+                                 <label for=&quot;mxn-input&quot; class=&quot;text-sm font-medium text-gray-600&quot;>¿Cuánto quieres juntar en MXN?</label>
+                                 <input type=&quot;number&quot; id=&quot;mxn-input&quot; placeholder=&quot;Ej: 50&quot; class=&quot;w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500&quot;>
+                                 <p class=&quot;text-center bg-green-50 text-green-800 p-3 rounded-lg&quot;>Necesitarás reciclar <strong id=&quot;goal-bottles&quot; class=&quot;text-xl&quot;>0</strong> botellas.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Redeem Options -->
+                        <div class=&quot;bg-white p-6 rounded-2xl shadow-lg border border-gray-200&quot;>
+                            <h2 class=&quot;text-2xl font-bold mb-4 text-green-700&quot;>Opciones de Canje</h2>
+                            <div class=&quot;space-y-4&quot;>
+                                <div class=&quot;flex items-center p-3 bg-gray-50 rounded-lg&quot;>
+                                    <span class=&quot;text-3xl mr-4&quot;>🚌</span>
+                                    <span class=&quot;font-medium text-gray-700&quot;>Saldo para Mi Pasaje</span>
+                                </div>
+                                <div class=&quot;flex items-center p-3 bg-gray-50 rounded-lg&quot;>
+                                    <span class=&quot;text-3xl mr-4&quot;>☕</span>
+                                    <span class=&quot;font-medium text-gray-700&quot;>Descuentos en Cafetería</span>
+                                </div>
+                                 <div class=&quot;flex items-center p-3 bg-gray-50 rounded-lg&quot;>
+                                    <span class=&quot;text-3xl mr-4&quot;>🧾</span>
+                                    <span class=&quot;font-medium text-gray-700&quot;>Pago de Órdenes (Próximamente)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Page Elements ---
+            const loginPage = document.getElementById('login-page');
+            const mainPage = document.getElementById('main-dashboard-page');
+            const scanBtn = document.getElementById('scan-btn');
+            const studentInfo = document.getElementById('student-info');
+            const logoutBtn = document.getElementById('logout-btn');
+
+            // --- Simulator Elements ---
+            const addBottleBtn = document.getElementById('add-bottle-btn');
+            const bottleCountEl = document.getElementById('bottle-count');
+            const pointsCountEl = document.getElementById('points-count');
+            const moneyValueEl = document.getElementById('money-value');
+            const activityLog = document.getElementById('activity-log');
+            const emptyLogMsg = document.getElementById('empty-log-msg');
+
+            // --- Goal Calculator Elements ---
+            const mxnInput = document.getElementById('mxn-input');
+            const goalBottlesEl = document.getElementById('goal-bottles');
+
+            // --- Conversion Rates ---
+            const POINTS_PER_BOTTLE = 10;
+            const MXN_PER_POINT = 0.10;
+            const MXN_PER_BOTTLE = POINTS_PER_BOTTLE * MXN_PER_POINT; // 1 MXN per bottle
+
+            // --- App State ---
+            let bottleCount = 0;
+            let pointsCount = 0;
+            let moneyValue = 0;
+            let hasEntries = false;
+
+            // --- Page Navigation Logic ---
+            scanBtn.addEventListener('click', () => {
+                // 1. Mock student data
+                const studentNames = ['Ana Sofía López', 'Miguel Ángel García', 'Ximena Hernández', 'Mateo Martínez'];
+                const studentId = Math.floor(Math.random() * (229999 - 220000) + 220000);
+                const studentName = studentNames[Math.floor(Math.random() * studentNames.length)];
+                
+                studentInfo.textContent = `Bienvenido, ${studentName} (Cód: ${studentId})`;
+
+                // 2. Show loading/scanning simulation
+                scanBtn.disabled = true;
+                scanBtn.innerHTML = `
+                    <svg class=&quot;animate-spin h-6 w-6 text-white&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;>
+                      <circle class=&quot;opacity-25&quot; cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;4&quot;></circle>
+                      <path class=&quot;opacity-75&quot; fill=&quot;currentColor&quot; d=&quot;M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z&quot;></path>
+                    </svg>
+                    Validando...
+                `;
+                
+                // 3. Simulate scan time and switch pages
+                setTimeout(() => {
+                    loginPage.classList.remove('visible-page');
+                    loginPage.classList.add('hidden-page');
+                    
+                    mainPage.classList.remove('hidden-page');
+                    mainPage.classList.add('visible-page');
+                }, 1500);
+            });
+
+            logoutBtn.addEventListener('click', () => {
+                // 1. Reset state
+                bottleCount = 0;
+                pointsCount = 0;
+                moneyValue = 0;
+                bottleCountEl.textContent = '0';
+                pointsCountEl.textContent = '0';
+                moneyValueEl.textContent = '0.00';
+                activityLog.innerHTML = '';
+                activityLog.appendChild(emptyLogMsg);
+                hasEntries = false;
+                mxnInput.value = '';
+                goalBottlesEl.textContent = '0';
+
+                // 2. Reset scan button
+                scanBtn.disabled = false;
+                scanBtn.innerHTML = `
+                    <svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-6 w-6&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;>
+                      <path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 4v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l.707-.707M6.343 17.657l-.707.707m12.728 0l.707.707M12 20v-1&quot; />
+                    </svg>
+                    Escanear Credencial
+                `;
+
+                // 3. Switch pages
+                mainPage.classList.remove('visible-page');
+                mainPage.classList.add('hidden-page');
+                
+                loginPage.classList.remove('hidden-page');
+                loginPage.classList.add('visible-page');
+            });
+
+
+            // --- Simulator Logic ---
+            addBottleBtn.addEventListener('click', () => {
+                bottleCount++;
+                pointsCount += POINTS_PER_BOTTLE;
+                moneyValue = pointsCount * MXN_PER_POINT;
+
+                // 1. Update UI counters
+                bottleCountEl.textContent = bottleCount;
+                pointsCountEl.textContent = pointsCount;
+                moneyValueEl.textContent = moneyValue.toFixed(2);
+
+                // 2. Add to log
+                if (!hasEntries) {
+                    activityLog.innerHTML = ''; // Clear 'no entries' message
+                    hasEntries = true;
+                }
+
+                const logEntry = document.createElement('div');
+                logEntry.className = 'p-3 bg-white border-b border-gray-200 text-sm flex justify-between items-center animate-pulse-once'; // Simple animation
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit' });
+                
+                logEntry.innerHTML = `
+                    <div>
+                        <p class=&quot;font-medium text-gray-800&quot;>Botella de PET depositada</p>
+                        <p class=&quot;text-xs text-gray-500&quot;>${now.toLocaleDateString('es-MX')} - ${timeString}</p>
+                    </div>
+                    <span class=&quot;font-bold text-green-600&quot;>+${POINTS_PER_BOTTLE} pts</span>
+                `;
+                
+                // Prepend to log so new entries are at the top
+                activityLog.insertBefore(logEntry, activityLog.firstChild);
+            });
+
+            // --- Goal Calculator Logic ---
+            mxnInput.addEventListener('input', () => {
+                const mxnTarget = parseFloat(mxnInput.value) || 0;
+                const bottlesNeeded = Math.ceil(mxnTarget / MXN_PER_BOTTLE);
+                goalBottlesEl.textContent = bottlesNeeded;
+            });
+        });
+    </script>
+</body>
+</html>"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold text-white">EcoPET</h3>
+            <p class="mt-2 text-gray-400">Un proyecto para un CUGDL más verde.</p>
+            <div class="mt-6 space-x-6">
+                <a href="#problema" class="hover:text-white">Problema</a>
+                <a href="#propuesta" class="hover:text-white">Propuesta</a>
+                <a href="#demo" class="hover:text-white">Demo</a>
+            </div>
+            <p class="mt-8 text-sm text-gray-500">&copy; 2025 EcoPET. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
